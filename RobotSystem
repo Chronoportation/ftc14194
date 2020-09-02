@@ -1,0 +1,30 @@
+/**
+ * @Author: [entry]
+ * @Project: [entry]
+ * @Start: [entry]
+ * @Last: [entry]
+ */
+
+//THIS IS JUST AN OUTLINE
+
+package org.firstinspires.ftc.teamcode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
+@TeleOp
+@SuppressWarnings({"unused"})
+public class RobotSystem extends OpMode {
+    //prepares needed hardware
+
+    //runs once when the user hits the INIT button
+    @Override
+    public void init() {
+
+    }
+
+    //runs repeatedly when the user hits PLAY, until hitting STOP
+    @Override
+    public void loop() {
+
+    }
+}
