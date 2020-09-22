@@ -37,23 +37,17 @@ public class Shirley extends OpMode {
         driveLF.setDirection(DcMotor.Direction.REVERSE);
         driveLB.setDirection(DcMotor.Direction.REVERSE);
 
-        //give each motor an encoder
-        driveRF.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        driveRB.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        driveLF.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        driveLB.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-
         //reset any encoder values
         driveRF.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         driveRB.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         driveLF.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         driveLB.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-
-        //allow encoders to run to a position--it is unspecified in this case because this is for the drive wheels in driver controlled
-        driveRF.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        driveRB.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        driveLF.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        driveLB.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        
+        //give each motor an encoder
+        driveRF.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        driveRB.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        driveLF.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        driveLB.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         telemetry.addData("Status", "Initialized");
         telemetry.update();
