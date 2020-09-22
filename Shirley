@@ -1,5 +1,5 @@
 /**
- * @Author: Georgia P.
+ * @Author: Georgia Petroff
  * @Project: Code for mini robot "Shirley"
  * @Start: 07/10/20
  * @Last: 07/10/20
@@ -30,8 +30,10 @@ public class Shirley extends OpMode {
         driveLB = hardwareMap.get(DcMotor.class, "driveLB");
 
         //set the direction for each motor
+        //clockwise
         driveRF.setDirection(DcMotor.Direction.FORWARD);
         driveRB.setDirection(DcMotor.Direction.FORWARD);
+        //counter-clockwise
         driveLF.setDirection(DcMotor.Direction.REVERSE);
         driveLB.setDirection(DcMotor.Direction.REVERSE);
 
@@ -46,6 +48,12 @@ public class Shirley extends OpMode {
         driveRB.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         driveLF.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         driveLB.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        //allow encoders to run to a position--it is unspecified in this case because this is for the drive wheels in driver controlled
+        driveRF.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        driveRB.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        driveLF.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        driveLB.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
         telemetry.addData("Status", "Initialized");
         telemetry.update();
@@ -63,6 +71,8 @@ public class Shirley extends OpMode {
         rxPow = gamepad1.right_stick_x;
 
         //give the motors power based on the joystick input
+        //math is math, just trust me
+        //with the way we have the wheels, some of these are different than the source
         driveRF.setPower(yPow - xPow - rxPow);
         driveRB.setPower(yPow + xPow - rxPow);
         driveLF.setPower(yPow + xPow + rxPow);
