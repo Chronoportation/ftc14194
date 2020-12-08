@@ -1,10 +1,10 @@
 /**
-     * Pre: all four drive wheels have been initialized and declared
-     * Param: int ticks - the absolute value of amount of ticks that the axel will be spinning per motor
+     * @Pre: all four drive wheels have been initialized and declared
+     * @Param: int ticks - the absolute value of amount of ticks that the axel will be spinning per motor
      *        double power - range 0 to 1.0
      *        int direction - range 0 to 7 (use the directions established below)
-     * Post: encoder positions of drive motors
-     * Return: none (void)
+     * @Post: encoder positions of drive motors
+     * @Return: none (void)
      *
      *
      * Here's how the directions work according to a clock:
